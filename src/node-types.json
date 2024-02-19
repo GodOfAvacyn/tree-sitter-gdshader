@@ -1,0 +1,3254 @@
+[
+  {
+    "type": "_declaration",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "const_declaration",
+        "named": true
+      },
+      {
+        "type": "function_declaration",
+        "named": true
+      },
+      {
+        "type": "group_uniforms_declaration",
+        "named": true
+      },
+      {
+        "type": "render_mode_declaration",
+        "named": true
+      },
+      {
+        "type": "shader_type_declaration",
+        "named": true
+      },
+      {
+        "type": "struct_declaration",
+        "named": true
+      },
+      {
+        "type": "uniform_declaration",
+        "named": true
+      },
+      {
+        "type": "varying_declaration",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_expr",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "array_literal_expr",
+        "named": true
+      },
+      {
+        "type": "binary_expr",
+        "named": true
+      },
+      {
+        "type": "call_expr",
+        "named": true
+      },
+      {
+        "type": "conditional_expr",
+        "named": true
+      },
+      {
+        "type": "ident_expr",
+        "named": true
+      },
+      {
+        "type": "member_expr",
+        "named": true
+      },
+      {
+        "type": "paren_expr",
+        "named": true
+      },
+      {
+        "type": "primitive_expr",
+        "named": true
+      },
+      {
+        "type": "subscript_expr",
+        "named": true
+      },
+      {
+        "type": "unary_expr",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_statement",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "adjustment_statement",
+        "named": true
+      },
+      {
+        "type": "assignment_statement",
+        "named": true
+      },
+      {
+        "type": "block",
+        "named": true
+      },
+      {
+        "type": "break_statement",
+        "named": true
+      },
+      {
+        "type": "const_var_declaration",
+        "named": true
+      },
+      {
+        "type": "continue_statement",
+        "named": true
+      },
+      {
+        "type": "expr_statement",
+        "named": true
+      },
+      {
+        "type": "for_statement",
+        "named": true
+      },
+      {
+        "type": "if_statement",
+        "named": true
+      },
+      {
+        "type": "return_statement",
+        "named": true
+      },
+      {
+        "type": "switch_statement",
+        "named": true
+      },
+      {
+        "type": "var_declaration",
+        "named": true
+      },
+      {
+        "type": "while_statement",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_type",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "array_type",
+        "named": true
+      },
+      {
+        "type": "builtin_type",
+        "named": true
+      },
+      {
+        "type": "ident_type",
+        "named": true
+      },
+      {
+        "type": "invalid_type",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "adjustment_statement",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          },
+          {
+            "type": "member_expr",
+            "named": true
+          },
+          {
+            "type": "subscript_expr",
+            "named": true
+          }
+        ]
+      },
+      "operation": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "++",
+            "named": false
+          },
+          {
+            "type": "--",
+            "named": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "argument_list",
+    "named": true,
+    "fields": {
+      "param_qualifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "param_qualifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_literal_expr",
+    "named": true,
+    "fields": {
+      "values": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_literal_values",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "array_literal_values",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_sizes",
+    "named": true,
+    "fields": {
+      "size": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "array_type",
+    "named": true,
+    "fields": {
+      "base_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      },
+      "size": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "assignment_statement",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          },
+          {
+            "type": "member_expr",
+            "named": true
+          },
+          {
+            "type": "subscript_expr",
+            "named": true
+          }
+        ]
+      },
+      "operation": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "binary_expr",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "block",
+    "named": true,
+    "fields": {
+      "statements": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "statement_sequence",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "boolean",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "break_statement",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "builtin_function",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "builtin_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "builtin_variable",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "call_expr",
+    "named": true,
+    "fields": {
+      "arguments": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "argument_list",
+            "named": true
+          }
+        ]
+      },
+      "function": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "conditional_expr",
+    "named": true,
+    "fields": {
+      "action": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      },
+      "alternate": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "const_declaration",
+    "named": true,
+    "fields": {
+      "specifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "var_specifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "precision_qualifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "const_var_declaration",
+    "named": true,
+    "fields": {
+      "specifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "var_specifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "precision_qualifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "continue_statement",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "expr_statement",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "for_statement",
+    "named": true,
+    "fields": {
+      "action": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_statement",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr_statement",
+            "named": true
+          }
+        ]
+      },
+      "initializer": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "var_declaration",
+            "named": true
+          }
+        ]
+      },
+      "logic": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "_expr",
+            "named": true
+          },
+          {
+            "type": "expr_statement",
+            "named": true
+          },
+          {
+            "type": "var_declaration",
+            "named": true
+          }
+        ]
+      },
+      "update": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "function_declaration",
+    "named": true,
+    "fields": {
+      "function_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      },
+      "parameters": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "parameter_list",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_uniforms_declaration",
+    "named": true,
+    "fields": {
+      "group_name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      },
+      "subgroup_name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "hint",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "hint_name",
+            "named": true
+          },
+          {
+            "type": "invalid_hint",
+            "named": true
+          }
+        ]
+      },
+      "params": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "hint_parameter_list",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "hint_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "hint",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hint_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "hint_parameter_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ident_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "builtin_function",
+          "named": true
+        },
+        {
+          "type": "builtin_variable",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "invalid_ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement",
+    "named": true,
+    "fields": {
+      "action": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "_statement",
+            "named": true
+          }
+        ]
+      },
+      "alternate": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "_statement",
+            "named": true
+          },
+          {
+            "type": "else",
+            "named": false
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "paren_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "interpolation_qualifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "invalid_hint",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "invalid_ident",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "invalid_render_mode",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "invalid_shader_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "invalid_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "member_expr",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      },
+      "member": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "param_qualifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "parameter",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      },
+      "sizes": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_sizes",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "parameter_list",
+    "named": true,
+    "fields": {
+      "qualifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "param_qualifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "parameter",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paren_expr",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "precision_qualifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "primitive_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "render_mode",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "render_mode_declaration",
+    "named": true,
+    "fields": {
+      "render_modes": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "invalid_render_mode",
+            "named": true
+          },
+          {
+            "type": "render_mode",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "return_statement",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "shader_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "shader_type_declaration",
+    "named": true,
+    "fields": {
+      "shader_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "invalid_shader_type",
+            "named": true
+          },
+          {
+            "type": "shader_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement_sequence",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_declaration",
+    "named": true,
+    "fields": {
+      "members": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "struct_member_list",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "struct_member",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      },
+      "sizes": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_sizes",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "struct_member_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "struct_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subscript_expr",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      },
+      "index": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "switch_case",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      },
+      "statements": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "switch_statements",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "switch_statement",
+    "named": true,
+    "fields": {
+      "case": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "switch_case",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "switch_statements",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unary_expr",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "uniform_declaration",
+    "named": true,
+    "fields": {
+      "hints": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "hint_list",
+            "named": true
+          }
+        ]
+      },
+      "specifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "var_specifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "precision_qualifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_declaration",
+    "named": true,
+    "fields": {
+      "specifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "var_specifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "var_specifier",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_function",
+            "named": true
+          },
+          {
+            "type": "builtin_variable",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "invalid_ident",
+            "named": true
+          }
+        ]
+      },
+      "sizes": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_sizes",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "varying_declaration",
+    "named": true,
+    "fields": {
+      "specifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "var_specifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "interpolation_qualifier",
+          "named": true
+        },
+        {
+          "type": "precision_qualifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "while_statement",
+    "named": true,
+    "fields": {
+      "action": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_statement",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "paren_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "!=",
+    "named": false
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "&&",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "++",
+    "named": false
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "--",
+    "named": false
+  },
+  {
+    "type": "-=",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": ">>",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "ACTIVE",
+    "named": false
+  },
+  {
+    "type": "ALBEDO",
+    "named": false
+  },
+  {
+    "type": "ALPHA",
+    "named": false
+  },
+  {
+    "type": "ALPHA_ANTIALIASING_EDGE",
+    "named": false
+  },
+  {
+    "type": "ALPHA_HASH_SCALE",
+    "named": false
+  },
+  {
+    "type": "ALPHA_SCISSOR_THRESHOLD",
+    "named": false
+  },
+  {
+    "type": "ALPHA_TEXTURE_COORDINATE",
+    "named": false
+  },
+  {
+    "type": "AMOUNT_RATIO",
+    "named": false
+  },
+  {
+    "type": "ANISOTROPY",
+    "named": false
+  },
+  {
+    "type": "ANISOTROPY_FLOW",
+    "named": false
+  },
+  {
+    "type": "AO",
+    "named": false
+  },
+  {
+    "type": "AO_LIGHT_AFFECT",
+    "named": false
+  },
+  {
+    "type": "ATTENUATION",
+    "named": false
+  },
+  {
+    "type": "ATTRACTOR_FORCE",
+    "named": false
+  },
+  {
+    "type": "AT_CUBEMAP_PASS",
+    "named": false
+  },
+  {
+    "type": "AT_HALF_RES_PASS",
+    "named": false
+  },
+  {
+    "type": "AT_LIGHT_PASS",
+    "named": false
+  },
+  {
+    "type": "AT_QUARTER_RES_PASS",
+    "named": false
+  },
+  {
+    "type": "BACKLIGHT",
+    "named": false
+  },
+  {
+    "type": "BINORMAL",
+    "named": false
+  },
+  {
+    "type": "BONE_INDICES",
+    "named": false
+  },
+  {
+    "type": "BONE_WEIGHTS",
+    "named": false
+  },
+  {
+    "type": "CAMERA_DIRECTION_WORLD",
+    "named": false
+  },
+  {
+    "type": "CAMERA_POSITION_WORLD",
+    "named": false
+  },
+  {
+    "type": "CANVAS_MATRIX",
+    "named": false
+  },
+  {
+    "type": "CLEARCOAT",
+    "named": false
+  },
+  {
+    "type": "CLEARCOAT_GLOSS",
+    "named": false
+  },
+  {
+    "type": "COLLIDED",
+    "named": false
+  },
+  {
+    "type": "COLLISION_DEPTH",
+    "named": false
+  },
+  {
+    "type": "COLLISION_NORMAL",
+    "named": false
+  },
+  {
+    "type": "CUSTOM",
+    "named": false
+  },
+  {
+    "type": "DELTA",
+    "named": false
+  },
+  {
+    "type": "DENSITY",
+    "named": false
+  },
+  {
+    "type": "DEPTH",
+    "named": false
+  },
+  {
+    "type": "DEPTH_TEXTURE",
+    "named": false
+  },
+  {
+    "type": "DIFFUSE_LIGHT",
+    "named": false
+  },
+  {
+    "type": "E",
+    "named": false
+  },
+  {
+    "type": "EMISSION",
+    "named": false
+  },
+  {
+    "type": "EMISSION_TRANSFORM",
+    "named": false
+  },
+  {
+    "type": "EMITTER_VELOCITY",
+    "named": false
+  },
+  {
+    "type": "EYEDIR",
+    "named": false
+  },
+  {
+    "type": "EYE_OFFSET",
+    "named": false
+  },
+  {
+    "type": "FLAG_EMIT_COLOR",
+    "named": false
+  },
+  {
+    "type": "FLAG_EMIT_CUSTOM",
+    "named": false
+  },
+  {
+    "type": "FLAG_EMIT_POSITION",
+    "named": false
+  },
+  {
+    "type": "FLAG_EMIT_ROT_SCALE",
+    "named": false
+  },
+  {
+    "type": "FLAG_EMIT_VELOCITY",
+    "named": false
+  },
+  {
+    "type": "FOG",
+    "named": false
+  },
+  {
+    "type": "FRAGCOORD",
+    "named": false
+  },
+  {
+    "type": "FRONT_FACING",
+    "named": false
+  },
+  {
+    "type": "HALF_RES_COLOR",
+    "named": false
+  },
+  {
+    "type": "INDEX",
+    "named": false
+  },
+  {
+    "type": "INTERPOLATE_TO_END",
+    "named": false
+  },
+  {
+    "type": "INV_PROJECTION_MATRIX",
+    "named": false
+  },
+  {
+    "type": "INV_VIEW_MATRIX",
+    "named": false
+  },
+  {
+    "type": "IRRADIANCE",
+    "named": false
+  },
+  {
+    "type": "LIFETIME",
+    "named": false
+  },
+  {
+    "type": "LIGHT",
+    "named": false
+  },
+  {
+    "type": "LIGHTX_COLOR",
+    "named": false
+  },
+  {
+    "type": "LIGHTX_DIRECTION",
+    "named": false
+  },
+  {
+    "type": "LIGHTX_ENABLED",
+    "named": false
+  },
+  {
+    "type": "LIGHTX_ENERGY",
+    "named": false
+  },
+  {
+    "type": "LIGHTX_SIZE",
+    "named": false
+  },
+  {
+    "type": "LIGHT_COLOR",
+    "named": false
+  },
+  {
+    "type": "LIGHT_IS_DIRECTIONAL",
+    "named": false
+  },
+  {
+    "type": "LIGHT_VERTEX",
+    "named": false
+  },
+  {
+    "type": "MASS",
+    "named": false
+  },
+  {
+    "type": "METALLIC",
+    "named": false
+  },
+  {
+    "type": "MODELVIEW_MATRIX",
+    "named": false
+  },
+  {
+    "type": "MODELVIEW_NORMAL_MATRIX",
+    "named": false
+  },
+  {
+    "type": "MODEL_MATRIX",
+    "named": false
+  },
+  {
+    "type": "MODEL_NORMAL_MATRIX",
+    "named": false
+  },
+  {
+    "type": "NODE_POSITION_VIEW",
+    "named": false
+  },
+  {
+    "type": "NODE_POSITION_WORLD",
+    "named": false
+  },
+  {
+    "type": "NORMAL",
+    "named": false
+  },
+  {
+    "type": "NORMAL_MAP",
+    "named": false
+  },
+  {
+    "type": "NORMAL_MAP_DEPTH",
+    "named": false
+  },
+  {
+    "type": "NORMAL_TEXTURE",
+    "named": false
+  },
+  {
+    "type": "NUMBER",
+    "named": false
+  },
+  {
+    "type": "OBJECT_POSITION",
+    "named": false
+  },
+  {
+    "type": "OUTPUT_IS_SRGB",
+    "named": false
+  },
+  {
+    "type": "PI",
+    "named": false
+  },
+  {
+    "type": "POINT_COORD",
+    "named": false
+  },
+  {
+    "type": "POSITION",
+    "named": false
+  },
+  {
+    "type": "PROJECTION_MATRIX",
+    "named": false
+  },
+  {
+    "type": "QUARTER_RES_COLOR",
+    "named": false
+  },
+  {
+    "type": "RADIANCE",
+    "named": false
+  },
+  {
+    "type": "RANDOM_SEED",
+    "named": false
+  },
+  {
+    "type": "RESTART",
+    "named": false
+  },
+  {
+    "type": "RESTART_COLOR",
+    "named": false
+  },
+  {
+    "type": "RESTART_CUSTOM",
+    "named": false
+  },
+  {
+    "type": "RESTART_POSITION",
+    "named": false
+  },
+  {
+    "type": "RESTART_ROT_SCALE",
+    "named": false
+  },
+  {
+    "type": "RESTART_VELOCITY",
+    "named": false
+  },
+  {
+    "type": "RIM",
+    "named": false
+  },
+  {
+    "type": "RIM_TINT",
+    "named": false
+  },
+  {
+    "type": "ROUGHNESS",
+    "named": false
+  },
+  {
+    "type": "SCREEN_MATRIX",
+    "named": false
+  },
+  {
+    "type": "SCREEN_TEXTURE",
+    "named": false
+  },
+  {
+    "type": "SCREEN_UV",
+    "named": false
+  },
+  {
+    "type": "SDF",
+    "named": false
+  },
+  {
+    "type": "SHADOW_VERTEX",
+    "named": false
+  },
+  {
+    "type": "SIZE",
+    "named": false
+  },
+  {
+    "type": "SKY_COORDS",
+    "named": false
+  },
+  {
+    "type": "SPECULAR_AMOUNT",
+    "named": false
+  },
+  {
+    "type": "SPECULAR_LIGHT",
+    "named": false
+  },
+  {
+    "type": "SPECULAR_SHININESS",
+    "named": false
+  },
+  {
+    "type": "SPECULAR_SHININESS_TEXTURE",
+    "named": false
+  },
+  {
+    "type": "SSS_STRENGTH",
+    "named": false
+  },
+  {
+    "type": "SSS_TRANSMITTANCE_BOOST",
+    "named": false
+  },
+  {
+    "type": "SSS_TRANSMITTANCE_COLOR",
+    "named": false
+  },
+  {
+    "type": "SSS_TRANSMITTANCE_DEPTH",
+    "named": false
+  },
+  {
+    "type": "TANGENT",
+    "named": false
+  },
+  {
+    "type": "TAU",
+    "named": false
+  },
+  {
+    "type": "TEXTURE_PIXEL_SIZE",
+    "named": false
+  },
+  {
+    "type": "TIME",
+    "named": false
+  },
+  {
+    "type": "TRANSFORM",
+    "named": false
+  },
+  {
+    "type": "USERDATAX",
+    "named": false
+  },
+  {
+    "type": "UV",
+    "named": false
+  },
+  {
+    "type": "UV2",
+    "named": false
+  },
+  {
+    "type": "UVW",
+    "named": false
+  },
+  {
+    "type": "VELOCITY",
+    "named": false
+  },
+  {
+    "type": "VERTEX",
+    "named": false
+  },
+  {
+    "type": "VIEW",
+    "named": false
+  },
+  {
+    "type": "VIEWPORT_SIZE",
+    "named": false
+  },
+  {
+    "type": "VIEW_INDEX",
+    "named": false
+  },
+  {
+    "type": "VIEW_MATRIX",
+    "named": false
+  },
+  {
+    "type": "VIEW_MONO_LEFT",
+    "named": false
+  },
+  {
+    "type": "VIEW_RIGHT",
+    "named": false
+  },
+  {
+    "type": "WORLD_POSITION",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
+    "named": false
+  },
+  {
+    "type": "abs",
+    "named": false
+  },
+  {
+    "type": "acos",
+    "named": false
+  },
+  {
+    "type": "acosh",
+    "named": false
+  },
+  {
+    "type": "all",
+    "named": false
+  },
+  {
+    "type": "alpha_to_coverage",
+    "named": false
+  },
+  {
+    "type": "alpha_to_coverage_and_one",
+    "named": false
+  },
+  {
+    "type": "ambient_light_disabled",
+    "named": false
+  },
+  {
+    "type": "any",
+    "named": false
+  },
+  {
+    "type": "asin",
+    "named": false
+  },
+  {
+    "type": "asinh",
+    "named": false
+  },
+  {
+    "type": "atan",
+    "named": false
+  },
+  {
+    "type": "atanh",
+    "named": false
+  },
+  {
+    "type": "bitCount",
+    "named": false
+  },
+  {
+    "type": "bitfieldExtract",
+    "named": false
+  },
+  {
+    "type": "bitfieldInsert",
+    "named": false
+  },
+  {
+    "type": "bitfieldReverse",
+    "named": false
+  },
+  {
+    "type": "blend_add",
+    "named": false
+  },
+  {
+    "type": "blend_disabled",
+    "named": false
+  },
+  {
+    "type": "blend_mul",
+    "named": false
+  },
+  {
+    "type": "blend_premul_alpha",
+    "named": false
+  },
+  {
+    "type": "blend_sub",
+    "named": false
+  },
+  {
+    "type": "bool",
+    "named": false
+  },
+  {
+    "type": "break",
+    "named": false
+  },
+  {
+    "type": "bvec2",
+    "named": false
+  },
+  {
+    "type": "bvec3",
+    "named": false
+  },
+  {
+    "type": "bvec4",
+    "named": false
+  },
+  {
+    "type": "canvas_item",
+    "named": false
+  },
+  {
+    "type": "case",
+    "named": false
+  },
+  {
+    "type": "ceil",
+    "named": false
+  },
+  {
+    "type": "clamp",
+    "named": false
+  },
+  {
+    "type": "collision_use_scale",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "const",
+    "named": false
+  },
+  {
+    "type": "continue",
+    "named": false
+  },
+  {
+    "type": "cos",
+    "named": false
+  },
+  {
+    "type": "cosh",
+    "named": false
+  },
+  {
+    "type": "cross",
+    "named": false
+  },
+  {
+    "type": "cull_back",
+    "named": false
+  },
+  {
+    "type": "cull_disabled",
+    "named": false
+  },
+  {
+    "type": "cull_front",
+    "named": false
+  },
+  {
+    "type": "dFdx",
+    "named": false
+  },
+  {
+    "type": "dFdxCoarse",
+    "named": false
+  },
+  {
+    "type": "dFdxFine",
+    "named": false
+  },
+  {
+    "type": "dFdy",
+    "named": false
+  },
+  {
+    "type": "dFdyCoarse",
+    "named": false
+  },
+  {
+    "type": "dFdyFine",
+    "named": false
+  },
+  {
+    "type": "default",
+    "named": false
+  },
+  {
+    "type": "degrees",
+    "named": false
+  },
+  {
+    "type": "depth_draw_always",
+    "named": false
+  },
+  {
+    "type": "depth_draw_never",
+    "named": false
+  },
+  {
+    "type": "depth_draw_opaque",
+    "named": false
+  },
+  {
+    "type": "depth_prepass_alpha",
+    "named": false
+  },
+  {
+    "type": "depth_test_disabled",
+    "named": false
+  },
+  {
+    "type": "determinant",
+    "named": false
+  },
+  {
+    "type": "diffuse_burley",
+    "named": false
+  },
+  {
+    "type": "diffuse_lambert",
+    "named": false
+  },
+  {
+    "type": "diffuse_lambert_wrap",
+    "named": false
+  },
+  {
+    "type": "diffuse_toon",
+    "named": false
+  },
+  {
+    "type": "disable_fog",
+    "named": false
+  },
+  {
+    "type": "disable_force",
+    "named": false
+  },
+  {
+    "type": "disable_velocity",
+    "named": false
+  },
+  {
+    "type": "distance",
+    "named": false
+  },
+  {
+    "type": "do",
+    "named": false
+  },
+  {
+    "type": "dot",
+    "named": false
+  },
+  {
+    "type": "elif",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "emit_subparticle",
+    "named": false
+  },
+  {
+    "type": "ensure_correct_normals",
+    "named": false
+  },
+  {
+    "type": "equal",
+    "named": false
+  },
+  {
+    "type": "exp",
+    "named": false
+  },
+  {
+    "type": "exp2",
+    "named": false
+  },
+  {
+    "type": "faceforward",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "filter_anisotropic",
+    "named": false
+  },
+  {
+    "type": "filter_linear",
+    "named": false
+  },
+  {
+    "type": "filter_mipmap",
+    "named": false
+  },
+  {
+    "type": "filter_nearest",
+    "named": false
+  },
+  {
+    "type": "findLSB",
+    "named": false
+  },
+  {
+    "type": "findMSB",
+    "named": false
+  },
+  {
+    "type": "flat",
+    "named": false
+  },
+  {
+    "type": "float",
+    "named": true
+  },
+  {
+    "type": "float",
+    "named": false
+  },
+  {
+    "type": "floatBitsToInt",
+    "named": false
+  },
+  {
+    "type": "floatBitsToUint",
+    "named": false
+  },
+  {
+    "type": "floor",
+    "named": false
+  },
+  {
+    "type": "fma",
+    "named": false
+  },
+  {
+    "type": "fog",
+    "named": false
+  },
+  {
+    "type": "fog_disabled",
+    "named": false
+  },
+  {
+    "type": "for",
+    "named": false
+  },
+  {
+    "type": "fract",
+    "named": false
+  },
+  {
+    "type": "frexp",
+    "named": false
+  },
+  {
+    "type": "fwidth",
+    "named": false
+  },
+  {
+    "type": "fwidthCoarse",
+    "named": false
+  },
+  {
+    "type": "fwidthFine",
+    "named": false
+  },
+  {
+    "type": "global",
+    "named": false
+  },
+  {
+    "type": "greaterThan",
+    "named": false
+  },
+  {
+    "type": "greaterThanEqual",
+    "named": false
+  },
+  {
+    "type": "group_uniforms",
+    "named": false
+  },
+  {
+    "type": "highp",
+    "named": false
+  },
+  {
+    "type": "hint_anisotropy",
+    "named": false
+  },
+  {
+    "type": "hint_default_black",
+    "named": false
+  },
+  {
+    "type": "hint_default_transparent",
+    "named": false
+  },
+  {
+    "type": "hint_default_white",
+    "named": false
+  },
+  {
+    "type": "hint_depth_texture",
+    "named": false
+  },
+  {
+    "type": "hint_normal",
+    "named": false
+  },
+  {
+    "type": "hint_normal_roughness_texture",
+    "named": false
+  },
+  {
+    "type": "hint_range",
+    "named": false
+  },
+  {
+    "type": "hint_roughness_a",
+    "named": false
+  },
+  {
+    "type": "hint_roughness_b",
+    "named": false
+  },
+  {
+    "type": "hint_roughness_g",
+    "named": false
+  },
+  {
+    "type": "hint_roughness_gray",
+    "named": false
+  },
+  {
+    "type": "hint_roughness_normal",
+    "named": false
+  },
+  {
+    "type": "hint_roughness_r",
+    "named": false
+  },
+  {
+    "type": "hint_screen_texture",
+    "named": false
+  },
+  {
+    "type": "ident",
+    "named": true
+  },
+  {
+    "type": "ident_type",
+    "named": true
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "imulExtended",
+    "named": false
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "inout",
+    "named": false
+  },
+  {
+    "type": "instance",
+    "named": false
+  },
+  {
+    "type": "int",
+    "named": false
+  },
+  {
+    "type": "intBitsToFloat",
+    "named": false
+  },
+  {
+    "type": "integer",
+    "named": true
+  },
+  {
+    "type": "inverse",
+    "named": false
+  },
+  {
+    "type": "inversesqrt",
+    "named": false
+  },
+  {
+    "type": "isampler2D",
+    "named": false
+  },
+  {
+    "type": "isampler2DArray",
+    "named": false
+  },
+  {
+    "type": "isampler3D",
+    "named": false
+  },
+  {
+    "type": "isinf",
+    "named": false
+  },
+  {
+    "type": "isnan",
+    "named": false
+  },
+  {
+    "type": "ivec2",
+    "named": false
+  },
+  {
+    "type": "ivec3",
+    "named": false
+  },
+  {
+    "type": "ivec4",
+    "named": false
+  },
+  {
+    "type": "keep_data",
+    "named": false
+  },
+  {
+    "type": "ldexp",
+    "named": false
+  },
+  {
+    "type": "length",
+    "named": false
+  },
+  {
+    "type": "lessThan",
+    "named": false
+  },
+  {
+    "type": "lessThanEqual",
+    "named": false
+  },
+  {
+    "type": "light_only",
+    "named": false
+  },
+  {
+    "type": "log",
+    "named": false
+  },
+  {
+    "type": "log2",
+    "named": false
+  },
+  {
+    "type": "lowp",
+    "named": false
+  },
+  {
+    "type": "mat2",
+    "named": false
+  },
+  {
+    "type": "mat3",
+    "named": false
+  },
+  {
+    "type": "mat4",
+    "named": false
+  },
+  {
+    "type": "matrixCompMult",
+    "named": false
+  },
+  {
+    "type": "max",
+    "named": false
+  },
+  {
+    "type": "mediump",
+    "named": false
+  },
+  {
+    "type": "min",
+    "named": false
+  },
+  {
+    "type": "mix",
+    "named": false
+  },
+  {
+    "type": "mod",
+    "named": false
+  },
+  {
+    "type": "modf",
+    "named": false
+  },
+  {
+    "type": "normalize",
+    "named": false
+  },
+  {
+    "type": "not",
+    "named": false
+  },
+  {
+    "type": "notEqual",
+    "named": false
+  },
+  {
+    "type": "out",
+    "named": false
+  },
+  {
+    "type": "outerProduct",
+    "named": false
+  },
+  {
+    "type": "packHalf2x16",
+    "named": false
+  },
+  {
+    "type": "packSnorm2x16",
+    "named": false
+  },
+  {
+    "type": "packSnorm4x8",
+    "named": false
+  },
+  {
+    "type": "packUnorm2x16",
+    "named": false
+  },
+  {
+    "type": "packUnorm4x8",
+    "named": false
+  },
+  {
+    "type": "particle_trails",
+    "named": false
+  },
+  {
+    "type": "particles",
+    "named": false
+  },
+  {
+    "type": "pow",
+    "named": false
+  },
+  {
+    "type": "radians",
+    "named": false
+  },
+  {
+    "type": "reflect",
+    "named": false
+  },
+  {
+    "type": "refract",
+    "named": false
+  },
+  {
+    "type": "render_mode",
+    "named": false
+  },
+  {
+    "type": "repeat_disable",
+    "named": false
+  },
+  {
+    "type": "repeat_enable",
+    "named": false
+  },
+  {
+    "type": "return",
+    "named": false
+  },
+  {
+    "type": "round",
+    "named": false
+  },
+  {
+    "type": "roundEven",
+    "named": false
+  },
+  {
+    "type": "sampler2D",
+    "named": false
+  },
+  {
+    "type": "sampler2DArray",
+    "named": false
+  },
+  {
+    "type": "sampler3D",
+    "named": false
+  },
+  {
+    "type": "samplerCube",
+    "named": false
+  },
+  {
+    "type": "samplerCubeArray",
+    "named": false
+  },
+  {
+    "type": "shader_type",
+    "named": false
+  },
+  {
+    "type": "shadow_to_opacity",
+    "named": false
+  },
+  {
+    "type": "shadows_disabled",
+    "named": false
+  },
+  {
+    "type": "sign",
+    "named": false
+  },
+  {
+    "type": "sin",
+    "named": false
+  },
+  {
+    "type": "sinh",
+    "named": false
+  },
+  {
+    "type": "skip_vertex_transform",
+    "named": false
+  },
+  {
+    "type": "sky",
+    "named": false
+  },
+  {
+    "type": "smooth",
+    "named": false
+  },
+  {
+    "type": "smoothstep",
+    "named": false
+  },
+  {
+    "type": "source_color",
+    "named": false
+  },
+  {
+    "type": "spatial",
+    "named": false
+  },
+  {
+    "type": "specular_disabled",
+    "named": false
+  },
+  {
+    "type": "specular_schlick_ggx",
+    "named": false
+  },
+  {
+    "type": "specular_toon",
+    "named": false
+  },
+  {
+    "type": "sqrt",
+    "named": false
+  },
+  {
+    "type": "sss_mode_skin",
+    "named": false
+  },
+  {
+    "type": "step",
+    "named": false
+  },
+  {
+    "type": "struct",
+    "named": false
+  },
+  {
+    "type": "switch",
+    "named": false
+  },
+  {
+    "type": "tan",
+    "named": false
+  },
+  {
+    "type": "tanh",
+    "named": false
+  },
+  {
+    "type": "texelFetch",
+    "named": false
+  },
+  {
+    "type": "texture",
+    "named": false
+  },
+  {
+    "type": "textureGather",
+    "named": false
+  },
+  {
+    "type": "textureGrad",
+    "named": false
+  },
+  {
+    "type": "textureLod",
+    "named": false
+  },
+  {
+    "type": "textureProj",
+    "named": false
+  },
+  {
+    "type": "textureProjGrad",
+    "named": false
+  },
+  {
+    "type": "textureProjLod",
+    "named": false
+  },
+  {
+    "type": "textureQueryLevels",
+    "named": false
+  },
+  {
+    "type": "textureQueryLod",
+    "named": false
+  },
+  {
+    "type": "textureSize",
+    "named": false
+  },
+  {
+    "type": "transpose",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "trunc",
+    "named": false
+  },
+  {
+    "type": "uaddCarry",
+    "named": false
+  },
+  {
+    "type": "uint",
+    "named": false
+  },
+  {
+    "type": "uintBitsToFloat",
+    "named": false
+  },
+  {
+    "type": "umulExtended",
+    "named": false
+  },
+  {
+    "type": "uniform",
+    "named": false
+  },
+  {
+    "type": "unpackHalf2x16",
+    "named": false
+  },
+  {
+    "type": "unpackSnorm2x16",
+    "named": false
+  },
+  {
+    "type": "unpackSnorm4x8",
+    "named": false
+  },
+  {
+    "type": "unpackUnorm2x16",
+    "named": false
+  },
+  {
+    "type": "unpackUnorm4x8",
+    "named": false
+  },
+  {
+    "type": "unshaded",
+    "named": false
+  },
+  {
+    "type": "usampler2D",
+    "named": false
+  },
+  {
+    "type": "usampler2DArray",
+    "named": false
+  },
+  {
+    "type": "usampler3D",
+    "named": false
+  },
+  {
+    "type": "use_half_res_pass",
+    "named": false
+  },
+  {
+    "type": "use_quarter_res_pass",
+    "named": false
+  },
+  {
+    "type": "usubBorrow",
+    "named": false
+  },
+  {
+    "type": "uvec2",
+    "named": false
+  },
+  {
+    "type": "uvec3",
+    "named": false
+  },
+  {
+    "type": "uvec4",
+    "named": false
+  },
+  {
+    "type": "varying",
+    "named": false
+  },
+  {
+    "type": "vec2",
+    "named": false
+  },
+  {
+    "type": "vec3",
+    "named": false
+  },
+  {
+    "type": "vec4",
+    "named": false
+  },
+  {
+    "type": "vertex_lighting",
+    "named": false
+  },
+  {
+    "type": "void",
+    "named": false
+  },
+  {
+    "type": "while",
+    "named": false
+  },
+  {
+    "type": "wireframe",
+    "named": false
+  },
+  {
+    "type": "world_vertex_coords",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "||",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  }
+]

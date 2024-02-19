@@ -1,0 +1,32 @@
+{
+  "name": "treesitter",
+  "version": "1.0.0",
+  "description": "treesitter for gdshader",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aiden",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "parser-directories": [
+    "/home/aiden/github",
+    "/home/aiden/src",
+    "/home/aiden/source",
+    "/home/aiden/Projects/gdshader/tree-sitter-gdshader"
+  ],
+  "tree-sitter": [
+    {
+      "scope": "source.gdshader",
+      "file-types": [
+          "gdshader"
+      ],
+      "injection-regex": "FUCKTHIS"
+    }
+  ]
+}

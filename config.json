@@ -1,0 +1,23 @@
+{
+  "parser-directories": [
+    "/home/aiden/github",
+    "/home/aiden/src",
+    "/home/aiden/source",
+    "/home/aiden/Projects/gdshader/tree-sitter-gdshader"
+  ],
+  "theme": {
+    "keyword": "purple",
+    "function": "blue",
+    "type": "green",
+    "number": "brown"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.gdshader",
+      "file-types": [
+        "gdarg",
+        "gdshader"
+      ]
+    }
+  ]
+}
