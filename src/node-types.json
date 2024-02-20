@@ -16,6 +16,10 @@
         "named": true
       },
       {
+        "type": "include_declaration",
+        "named": true
+      },
+      {
         "type": "render_mode_declaration",
         "named": true
       },
@@ -931,6 +935,22 @@
     }
   },
   {
+    "type": "include_declaration",
+    "named": true,
+    "fields": {
+      "file": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "interpolation_qualifier",
     "named": true,
     "fields": {}
@@ -1613,6 +1633,14 @@
   },
   {
     "type": "!=",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "#include",
     "named": false
   },
   {
@@ -2728,6 +2756,10 @@
     "named": false
   },
   {
+    "type": "include",
+    "named": false
+  },
+  {
     "type": "inout",
     "named": false
   },
@@ -3042,6 +3074,10 @@
   {
     "type": "step",
     "named": false
+  },
+  {
+    "type": "string",
+    "named": true
   },
   {
     "type": "struct",

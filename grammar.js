@@ -50,6 +50,7 @@ module.exports = grammar({
             $.uniform_declaration,
             $.struct_declaration,
             $.function_declaration,
+            $.include_declaration,
         ),
 
         shader_type_declaration: $ => prec(PREC.NAMED, seq(
@@ -169,6 +170,10 @@ module.exports = grammar({
             optional(field("sizes", $.array_sizes))
         )),
 
+        include_declaration: $ => seq(
+            "#", "include",
+            field("file", $.string)
+        ),
 
         // STATEMENTS
         _statement: $ => choice(
@@ -468,6 +473,8 @@ module.exports = grammar({
 
         float: $ => /\d+\.\d+/,
 
+        string: $ => /"([^"]*)"/,
+
         unmatched_text: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
 
         precision_qualifier: $ => choice(
@@ -519,7 +526,8 @@ module.exports = grammar({
             "if", "else",
             "elif", "continue",
             "break", "switch",
-            "case", "default"
+            "case", "default",
+            "#include"
         ),
         param_qualifier: $ => choice(
             "in", "out", "inout"
