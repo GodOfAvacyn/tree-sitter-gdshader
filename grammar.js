@@ -522,9 +522,8 @@ module.exports = grammar({
             "instance", "const",
             "varying", "uniform",
             "struct", "for",
-            "while", "do",
-            "if", "else",
-            "elif", "continue",
+            "while", "if",
+            "else", "continue",
             "break", "switch",
             "case", "default",
             "#include"
